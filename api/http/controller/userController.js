@@ -79,13 +79,15 @@ const addAccountEvent = async(addAccountEvent,smartContractTxHash,accountAddr)=>
       if (!err && result.transactionHash == smartContractTxHash) {
         console.log({
           'originName': contract.getPoint.call({from: accountAddr['result']})[0],
-          'point': contract.getPoint.call({from: accountAddr['result']})[1].toNumber()
+          'point': contract.getPoint.call({from: accountAddr['result']})[1].toNumber(),
+          'account':accountAddr['result']
         });
         resolve({
           statusCode:200,
           message:{
             'originName': contract.getPoint.call({from: accountAddr['result']})[0],
-            'point': contract.getPoint.call({from: accountAddr['result']})[1].toNumber()
+            'point': contract.getPoint.call({from: accountAddr['result']})[1].toNumber(),
+            'account':accountAddr['result']
           }
         }); 
       } else {
