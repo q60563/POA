@@ -6,6 +6,6 @@ router.get('/404', async ( ctx )=>{
 });
 
 router.use(require('./routers/groups/user').middleware());
-router.use(require('./routers/groups/index').middleware());
+router.use(require('./routers/groups/change').middleware());
 
 module.exports = router;

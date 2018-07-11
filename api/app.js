@@ -10,6 +10,6 @@ app.use(bodyParser());
 
 app.use(require('./http/router').middleware());
 
-app.listen(3456,()=>{
+app.listen(8000,()=>{
   console.log('Already start bonus points server!!!');
 });
